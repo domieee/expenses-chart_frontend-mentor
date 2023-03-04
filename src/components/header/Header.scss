@@ -1,0 +1,40 @@
+$pale-orange: hsl(33, 100%, 98%);
+
+@font-face {
+    font-family: DMSans-regular;
+    src: url(../../fonts/DMSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: DMSans-bold;
+    src: url(../../fonts/DMSans-Bold.ttf);
+}
+
+
+.balance {
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+    background-color: hsl(10, 79%, 65%);
+
+    .subheader, .balance-nr {
+        color: $pale-orange;
+    }
+    
+    .subheader {
+        font-family: DMSans-Regular;
+        font-size: 0.8em;
+    }
+
+    .balance-nr {
+        font-family: DMSans-bold;
+        font-size: 1.4em;
+        margin-top: 5px;
+    }
+
+    > img {
+        width: 50px;
+    }
+}

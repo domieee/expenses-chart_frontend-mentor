@@ -1,0 +1,53 @@
+@font-face {
+    font-family: DMSans-regular;
+    src: url(../../fonts/DMSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: DMSans-bold;
+    src: url(../../fonts/DMSans-Bold.ttf);
+}
+
+main {
+    padding: 20px;
+    margin-top: 15px;
+    background-color: hsl(33, 100%, 98%);
+    height: 250px;
+    border-radius: 15px;
+
+    > h1 {
+        color: hsl(25, 47%, 15%);
+        font-family: DMSans-bold;
+        font-size: 1.5em;
+    }
+}
+
+.chart {
+    justify-content: space-evenly;
+    display: flex;
+    height: 180px;
+
+
+    .chartColumn {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        > p, .chartItem {
+            margin-inline: auto;
+        }
+
+        .chartItem {
+            border-radius: 5px;
+            background-color: hsl(10, 79%, 65%);
+            width: 35px;
+        }
+
+        > p {
+            margin-top: 5px;
+            font-size: 0.8em;
+            font-family: DMSans-regular;
+            color: hsl(28, 10%, 53%);
+        }
+    }
+}
