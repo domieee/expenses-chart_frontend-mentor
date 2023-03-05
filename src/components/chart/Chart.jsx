@@ -5,6 +5,7 @@ import './Chart.scss'
 /* 
     TODOS:
         TODO: write a function that detects the highest value in the chart and sets it's style to indicate that it's higher
+        TODO: add styles for chartitem while it's state is true 
 */
 
 const Chart = () => {
@@ -26,7 +27,6 @@ const Chart = () => {
                 {Data.map((data, index) => {
                     return (
                         <article className='chartColumn'>
-                            {
                                 <div
                                     key={index + 1}
                                     className='amountView'
@@ -40,7 +40,6 @@ const Chart = () => {
                                         {`$${data.amount}`}
                                     </p>
                                 </div>
-                            }
                             <div
                                 style={{ maxHeight: `${data.amount}%` }}
                                 id={index + 1}
