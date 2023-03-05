@@ -59,13 +59,14 @@ main {
             margin-inline: auto;
         }
 
-        > .chartItem {
+        .chartItem {
             border-radius: 5px;
             background-color: hsl(10, 79%, 65%);
-            width: 42px;
+            width: 40px;
             height: 100%;
             margin-inline: 8px;
             transition: opacity 0.25s ease;
+            transition: width 0.25s ease;
 
             &:hover {
                 opacity: 67.5%;
@@ -115,9 +116,21 @@ main {
     }
 }
 
-@media (width: 374px) {
-    .chartItem {
-        width: 20px;
+@media only screen and (max-width: 400px) {
+
+    #root {
+        padding-inline: 20px;
+        .card {
+            .main {
+                .chart {
+                    .chartColumn {
+                        .chartItem {
+                            width: 20px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
