@@ -33,7 +33,6 @@ main {
     display: flex;
     height: 180px;
 
-
     .chartColumn {
         display: flex;
         flex-direction: column;
@@ -47,6 +46,7 @@ main {
             margin-bottom: 5px;
             border-radius: 5px;
             margin-inline: auto;
+            transition: padding 0.25s ease;
 
             p.amount {
                 font-family: DMSans-regular;
@@ -55,7 +55,8 @@ main {
             }
         }
 
-        > p, .chartItem {
+        > p,
+        .chartItem {
             margin-inline: auto;
         }
 
@@ -74,7 +75,7 @@ main {
             }
         }
 
-        > p {
+        >p {
             margin-top: 5px;
             font-size: 0.8em;
             font-family: DMSans-regular;
@@ -87,7 +88,8 @@ main {
     display: flex;
     height: 34%;
 
-    .footerLeft, .footerRight {
+    .footerLeft,
+    .footerRight {
         display: flex;
         flex-direction: column;
         width: 50%;
@@ -99,7 +101,7 @@ main {
         .totalSum {
             font-family: DMSans-bold;
             font-size: 2.5em;
-        }   
+        }
     }
 
     .footerRight {
@@ -120,10 +122,19 @@ main {
 
     #root {
         padding-inline: 20px;
+
         .card {
             .main {
                 .chart {
                     .chartColumn {
+                        .amountView {
+                            padding: 4px;
+
+                            p.amount {
+                                font-size: 0.6em;
+                            }
+                        }
+
                         .chartItem {
                             width: 20px;
                         }
@@ -133,4 +144,3 @@ main {
         }
     }
 }
-

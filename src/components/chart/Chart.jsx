@@ -3,10 +3,6 @@ import Data from '../../data/data.json'
 import './Chart.scss'
 
 /* 
-    TODOS:
-        TODO: write a function that detects the highest value in the chart and sets it's style to indicate that it's higher
-        TODO: add styles for chartitem while it's state is true
-        TODO: responsive styles
 */
 
 const Chart = () => {
@@ -35,7 +31,7 @@ const Chart = () => {
                                         display: view[index + 1]
                                             ? 'block'
                                             : 'none'
-                                    }}>
+                                    }} >
                                     <p
                                         className='amount'>
                                         {`$${data.amount}`}
@@ -50,7 +46,8 @@ const Chart = () => {
                                 }}
                                 id={index + 1}
                                 className={`chartItem`}     
-                                onClick={() => toggleFunction(index + 1)}>
+                                onMouseEnter={() => toggleFunction(index + 1)}
+                                onMouseLeave={() => toggleFunction(index + 1)} >
                             </div>
                             <p>{data.day}</p>
                         </article>
