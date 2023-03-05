@@ -1,25 +1,8 @@
+import { useState } from 'react';
 import Data from '../../data/data.json'
 import './Chart.scss'
 
 const Chart = () => {
-
-    const numCopy = [...Data]
-    console.log(numCopy);
-
-    function largest(arr) {
-        let i;
-
-        let max = numCopy[0];
-
-        // Traverse array elements  
-        // from second and compare 
-        // every element with current max  
-        for (i = 1; i < numCopy.length; i++) {
-            if (numCopy[i] > max)
-                max = numCopy[i];
-        }
-        return max;
-    }
 
     return (
         <main className='main'>
@@ -38,11 +21,15 @@ const Chart = () => {
             </section>
 
             <section className='footer'>
-                <p className='total-header'>Total this month</p>
-                {Data.map(data => {
+                <article className='footerLeft'>
+                    <p className='totalHeader'>Total this month</p>
+                    <p className='totalSum'>478.33</p>
+                </article>
+                <article className='footerRight'>
+                    <p className='percentageLastMonth'>+2,4%</p>
+                    <p className='subtextLastMonth'>from last month</p>
+                </article>
 
-                })}
-                <p>{}</p>
             </section>
         </main>
     );
