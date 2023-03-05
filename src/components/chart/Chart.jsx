@@ -5,7 +5,8 @@ import './Chart.scss'
 /* 
     TODOS:
         TODO: write a function that detects the highest value in the chart and sets it's style to indicate that it's higher
-        TODO: add styles for chartitem while it's state is true 
+        TODO: add styles for chartitem while it's state is true
+        TODO: responsive
 */
 
 const Chart = () => {
