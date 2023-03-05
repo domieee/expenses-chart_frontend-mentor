@@ -27,7 +27,6 @@ const Chart = () => {
                     return (
                         <article className='chartColumn'>
                             {
-
                                 <div
                                     key={index + 1}
                                     className='amountView'
@@ -41,7 +40,6 @@ const Chart = () => {
                                         {`$${data.amount}`}
                                     </p>
                                 </div>
-
                             }
                             <div
                                 style={{ maxHeight: `${data.amount}%` }}
