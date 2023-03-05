@@ -6,7 +6,7 @@ import './Chart.scss'
     TODOS:
         TODO: write a function that detects the highest value in the chart and sets it's style to indicate that it's higher
         TODO: add styles for chartitem while it's state is true
-        TODO: responsive
+        TODO: responsive styles
 */
 
 const Chart = () => {
@@ -42,9 +42,14 @@ const Chart = () => {
                                     </p>
                                 </div>
                             <div
-                                style={{ maxHeight: `${data.amount}%` }}
+                                style={{ 
+                                    maxHeight: `${data.amount}%`,
+                                    backgroundColor: view[index + 1]
+                                        ? 'hsl(186, 34%, 60%)'
+                                        : 'hsl(10, 79%, 65%)'
+                                }}
                                 id={index + 1}
-                                className={`chartItem`}
+                                className={`chartItem`}     
                                 onClick={() => toggleFunction(index + 1)}>
                             </div>
                             <p>{data.day}</p>

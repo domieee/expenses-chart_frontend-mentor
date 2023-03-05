@@ -47,6 +47,7 @@ main {
             margin-bottom: 5px;
             border-radius: 5px;
             margin-inline: auto;
+
             p.amount {
                 font-family: DMSans-regular;
                 font-size: 0.8em;
@@ -114,7 +115,9 @@ main {
     }
 }
 
-@media (min-width: 375px) {
-
+@media (width: 374px) {
+    .chartItem {
+        width: 20px;
+    }
 }
 
