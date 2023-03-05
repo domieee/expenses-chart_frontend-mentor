@@ -8,11 +8,17 @@
     src: url(../../fonts/DMSans-Bold.ttf);
 }
 
+@mixin subtext {
+    color: hsl(28, 10%, 53%);
+    font-size: 0.8em;
+    font-family: DMSans-regular;
+}
+
 main {
     padding: 20px;
     margin-top: 15px;
     background-color: hsl(33, 100%, 98%);
-    height: 250px;
+    height: 380px;
     border-radius: 15px;
 
     > h1 {
@@ -33,6 +39,20 @@ main {
         flex-direction: column;
         justify-content: flex-end;
 
+        .amountView {
+            background-color: hsl(25, 47%, 15%);
+            padding: 6px;
+            text-align: center;
+            margin-bottom: 2px;
+            border-radius: 5px;
+
+            p.amount {
+                font-family: DMSans-regular;
+                font-size: 0.8em;
+                color: hsl(33, 100%, 98%);
+            }
+        }
+
         > p, .chartItem {
             margin-inline: auto;
         }
@@ -40,7 +60,7 @@ main {
         .chartItem {
             border-radius: 5px;
             background-color: hsl(10, 79%, 65%);
-            width: 35px;
+            width: 40px;
         }
 
         > p {
@@ -51,3 +71,38 @@ main {
         }
     }
 }
+
+.footer {
+    display: flex;
+    height: 34%;
+
+    .footerLeft, .footerRight {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .footerLeft {
+        justify-content: flex-end;
+
+
+        .totalSum {
+            font-family: DMSans-bold;
+            font-size: 2.5em;
+        }   
+    }
+
+    .footerRight {
+        justify-content: flex-end;
+        align-items: end;
+
+        .percentageLastMonth {
+            font-family: DMSans-bold;
+        }
+    }
+
+    .subtextFooter {
+        @include subtext;
+    }
+}
+

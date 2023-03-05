@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <header className='balance'>
             <div>
-                <p className='subheader'>My Balance</p>
+                <p className='subheader'>My balance</p>
                 <p className='balance-nr'>$921.48</p> 
             </div>
             <img src={Logo} alt="" />
