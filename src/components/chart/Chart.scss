@@ -38,14 +38,15 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        align-items: center;
 
         .amountView {
             background-color: hsl(25, 47%, 15%);
             padding: 6px;
             text-align: center;
-            margin-bottom: 2px;
+            margin-bottom: 5px;
             border-radius: 5px;
-
+            margin-inline: auto;
             p.amount {
                 font-family: DMSans-regular;
                 font-size: 0.8em;
@@ -57,10 +58,18 @@ main {
             margin-inline: auto;
         }
 
-        .chartItem {
+        > .chartItem {
             border-radius: 5px;
             background-color: hsl(10, 79%, 65%);
-            width: 40px;
+            width: 42px;
+            height: 100%;
+            margin-inline: 8px;
+            transition: opacity 0.25s ease;
+
+            &:hover {
+                opacity: 67.5%;
+                cursor: pointer;
+            }
         }
 
         > p {
@@ -85,7 +94,6 @@ main {
     .footerLeft {
         justify-content: flex-end;
 
-
         .totalSum {
             font-family: DMSans-bold;
             font-size: 2.5em;
@@ -104,5 +112,9 @@ main {
     .subtextFooter {
         @include subtext;
     }
+}
+
+@media (min-width: 375px) {
+
 }
 

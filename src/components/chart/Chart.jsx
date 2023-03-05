@@ -10,19 +10,35 @@ import './Chart.scss'
 
 const Chart = () => {
 
+    const [view, setView] = useState({})
+
+    function toggleFunction(id) {
+        setView({
+            ...view,
+            [id]: !view[id],
+        });
+    }
+
     return (
         <main className='main'>
             <h1>Spending - Last 7 Days</h1>
             <section className='chart'>
-                {Data.map(data => {
+                {Data.map((data, index) => {
                     return (
                         <article className='chartColumn'>
-                            <div className='amountView'>
-                                <p className='amount'>{`$${data.amount}`}</p>
-                            </div>
+                            {
+
+                                <div key={index + 1} className='amountView'
+                                style={{ display: view[index + 1] ? 'block' : 'none'}}>
+                                    <p className='amount'>{`$${data.amount}`}</p>
+                                </div>
+
+                            }
                             <div
-                                style={{ height: `${data.amount}%` }}
-                                className='chartItem'>
+                                style={{ maxHeight: `${data.amount}%` }}
+                                id={index + 1}
+                                className={`chartItem`}
+                                onClick={() => toggleFunction(index + 1)}>
                             </div>
                             <p>{data.day}</p>
                         </article>
